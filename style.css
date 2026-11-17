@@ -1,0 +1,126 @@
+
+/* 1. Reset Default Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. Page Background */
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #141e30, #243b55);
+}
+
+/* 3. Calculator Container */
+.calculator {
+    width: 340px;
+    padding: 25px;
+    background: #1e293b;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* 4. Display Section */
+.display {
+    margin-bottom: 20px;
+}
+
+#display {
+    width: 100%;
+    height: 75px;
+    padding: 15px;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    background: #0f172a;
+    color: white;
+    font-size: 30px;
+    text-align: right;
+}
+
+/* 5. Button Grid */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+/* 6. Common Button Styling */
+button {
+    height: 60px;
+    border: none;
+    border-radius: 12px;
+    background: #334155;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* 7. Button Hover Effect */
+button:hover {
+    background: #475569;
+    transform: translateY(-3px);
+}
+
+/* 8. Button Click Effect */
+button:active {
+    transform: scale(0.95);
+}
+
+/* 9. Operator Buttons */
+.operator {
+    background: #f59e0b;
+    color: white;
+}
+
+.operator:hover {
+    background: #d97706;
+}
+
+/* 10. Clear Button */
+.clear {
+    background: #ef4444;
+}
+
+.clear:hover {
+    background: #dc2626;
+}
+
+/* 11. Delete Button */
+.delete {
+    background: #64748b;
+}
+
+.delete:hover {
+    background: #475569;
+}
+
+/* 12. Equals Button */
+.equals {
+    background: #22c55e;
+    grid-column: span 2;
+}
+
+.equals:hover {
+    background: #16a34a;
+}
+
+/* 13. Responsive Design */
+@media (max-width: 400px) {
+    .calculator {
+        width: 90%;
+        padding: 18px;
+    }
+
+    button {
+        height: 55px;
+        font-size: 18px;
+    }
+}
